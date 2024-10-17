@@ -1,0 +1,19 @@
+.navbar{
+    width: 100%;
+}
+
+.navbar > ul{
+    margin-left: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar > ul > li > a{
+    margin-left: 50px;
+    text-decoration: none;
+    color:blueviolet;
+    font-weight: bolder;
+}

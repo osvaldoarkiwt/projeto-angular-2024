@@ -1,0 +1,83 @@
+<!--
+<p *ngIf="alunos.length>0; else vazio">
+    Existem {{alunos.length}} matriculados
+</p>
+
+<ng-template #vazio>
+    <p>Não existem alunos matrículados!</p>
+</ng-template>
+-->
+<p>
+    @if(alunos.length>0){
+        Existem {{alunos.length}} matriculados
+    }
+    @else{
+        Não existem alunos matrículados!
+    }
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>idade</th>
+        </tr>
+    </thead>
+    <tbody>
+       <!--
+        <tr *ngFor="let aluno of alunos">
+            <td>{{aluno.id}}</td>
+            <td>{{aluno.nome}}</td>
+            <td>{{aluno.idade}}</td>
+        </tr>
+        -->
+        @for(ninja of alunos; track alunos){
+          <tr>
+              <td>{{ninja.id}}</td>
+              <td>{{ninja.nome}}</td>
+              <td>{{ninja.idade}}</td>
+          </tr>
+        }
+        @empty{
+            <tr>
+                <td colspan="3">lista vazia!</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae laboriosam asperiores velit corrupti, libero numquam sint perferendis adipisci quis eius nulla consectetur itaque recusandae. Nobis, beatae? Fuga provident tempora quibusdam.</p>
+<p>Commodi doloribus, corporis recusandae facere praesentium nobis repellendus laborum itaque facilis, neque consequatur maiores necessitatibus! Totam corrupti, quos suscipit cupiditate enim fuga eaque beatae at, ipsam repellat ab nostrum explicabo.</p>
+<p>Veniam tenetur ipsum nobis. Incidunt omnis cupiditate corrupti voluptate unde. Atque tempore suscipit dolores odit nulla magnam! Quam perspiciatis beatae, odit nihil aut quas. Debitis esse dicta facere pariatur illum.</p>
+<p>Ad, beatae veniam repellat est in laboriosam quas ipsa. Numquam officiis eius necessitatibus dolorum facilis, ullam optio totam, mollitia et harum quibusdam, non modi officia ut ducimus eveniet eos possimus.</p>
+<p>Consequuntur nesciunt suscipit fugiat magnam maxime quasi exercitationem assumenda iste, natus at. Praesentium mollitia accusantium sunt perferendis. Et cumque dolore reiciendis placeat minus nihil non, porro facere! Porro, quidem quo?</p>
+<p>Rerum labore eveniet, praesentium, tenetur nisi tempora quam quas enim accusamus quidem nam porro laborum dolore modi beatae sequi magnam dolorem at animi dignissimos vero dolorum consequatur. Perferendis, dignissimos eaque.</p>
+<p>Quos explicabo pariatur error assumenda ipsa, quaerat sequi cupiditate blanditiis qui rem officia autem. Deserunt praesentium, culpa pariatur maxime fugit at illum quae, velit magnam tempore dignissimos accusantium voluptatem ex.</p>
+<p>Perferendis quisquam debitis exercitationem facere iure in. Ipsum atque laboriosam culpa alias labore autem quae suscipit ratione consequuntur! Quo odit soluta quisquam dignissimos quas asperiores error qui natus doloremque? Perferendis?</p>
+<p>Quidem consectetur nisi iste eaque suscipit enim totam iure cum modi ipsum dicta ullam voluptates, nesciunt omnis provident illo doloribus! Quasi dolorem quo ducimus reiciendis placeat molestias maiores earum consequatur!</p>
+<p>Accusantium, sequi temporibus? Ut laudantium similique molestiae dolores explicabo iusto, itaque cum id corrupti dicta cupiditate ipsum veritatis error voluptate sed repellat impedit, odio temporibus dolore nesciunt culpa ducimus ipsam?</p>
+<p>Illum earum ab id, odio esse facilis incidunt excepturi quasi maiores voluptatum ut architecto quibusdam, laboriosam quidem eos adipisci? Praesentium perspiciatis sit neque tempora quam, eligendi at quaerat sequi explicabo.</p>
+<p>Sint distinctio ut debitis corrupti nulla ipsam maxime aliquam, velit harum quasi dignissimos. Sequi mollitia alias provident corrupti necessitatibus, recusandae neque quos sunt earum, hic deleniti et laborum doloremque aliquid!</p>
+<p>Qui molestias corporis laboriosam quam alias quasi facilis fuga excepturi exercitationem et error ullam modi vero totam temporibus animi aliquam quis, commodi porro illo neque dolore? Officiis odio deserunt repellat.</p>
+<p>Ab laudantium doloribus, illum doloremque blanditiis numquam necessitatibus commodi veniam aliquid magni voluptatum porro ex animi aperiam libero! Voluptates autem asperiores necessitatibus neque. Ratione inventore eum alias quam corporis exercitationem.</p>
+<p>Minima sed tenetur autem dolore quia quam omnis consectetur nemo, ipsam labore veniam dicta reprehenderit blanditiis odio eius corporis illum tempore sit. Magnam consequatur similique laboriosam quisquam ut perferendis minus!</p>
+<p>Amet ut aliquid cum aspernatur, ducimus dolore reprehenderit omnis iusto, totam ex esse accusantium accusamus quaerat doloribus a quibusdam pariatur incidunt dignissimos natus vel? Neque vitae illo culpa mollitia iure!</p>
+<p>Facere dolorem molestiae ut doloremque architecto recusandae porro debitis quam omnis deserunt adipisci eligendi incidunt ea voluptates unde, molestias consectetur? Hic et quibusdam, alias iste corrupti dolorum voluptatem dolor excepturi.</p>
+<p>Voluptas, magnam sapiente fuga molestiae recusandae, dignissimos sint, laborum repudiandae quam dolorum autem incidunt architecto error officiis quidem commodi iusto dolorem obcaecati fugiat excepturi illum nulla eveniet asperiores sed. Voluptate.</p>
+<p>Enim illum aliquid architecto ad inventore, vel non! Consequatur cupiditate incidunt quas, voluptatem eligendi aspernatur ut dolores sunt architecto consectetur obcaecati illum itaque soluta voluptatum fuga voluptatibus minus optio perferendis.</p>
+<p>Ducimus quos tenetur veniam rem modi sequi accusamus, numquam distinctio maiores obcaecati maxime veritatis fugiat dolorem dolore a quidem ipsam ratione iusto dignissimos vel facere totam, esse nam praesentium. Rem?</p>
+
+@defer(on timer(3s)){
+    <figure>
+        <img src="https://img.odcdn.com.br/wp-c2323ontent/uploads/2021/12/mega-man-live-action-capa.jpg" alt="">
+    </figure>
+}
+@placeholder{
+    <p>imagem do megaman</p>
+}
+@error{
+    <p>imagem não carregada</p>
+}
+
