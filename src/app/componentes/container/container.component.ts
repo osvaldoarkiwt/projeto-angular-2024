@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PainelComponent } from '../painel/painel.component';
 import { FormularioComponent } from '../formulario/formulario.component';
+import { Requisicao } from '../../models/RequisicaoModel';
 
 @Component({
   selector: 'app-container',
@@ -11,9 +12,12 @@ import { FormularioComponent } from '../formulario/formulario.component';
 })
 export class ContainerComponent {
 
-  input: string = 'algum valor aleatório';
+  input: Requisicao | undefined;
 
-  receberValor(resultado : string){
+  receberValor(resultado : Requisicao){
+    
+    this.input = resultado;
+
     console.log(resultado);
   }
 }

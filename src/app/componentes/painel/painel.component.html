@@ -1,3 +1,9 @@
-<p>
-    {{valor}}
-</p>
+<div>
+    @if(valor !== undefined){
+     <p>{{valor.banda}}</p>
+     <p>{{valor.musica}}</p>   
+    }
+    @else{
+        <p>Digite os parâmetros de busca!</p>
+    }
+</div>

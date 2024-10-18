@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Requisicao } from '../../models/RequisicaoModel';
 
 @Component({
   selector: 'app-painel',
@@ -9,6 +10,6 @@ import { Component, Input } from '@angular/core';
 })
 export class PainelComponent {
 
-  @Input() valor: string = '';
+  @Input() valor: Requisicao | undefined;
 
 }
