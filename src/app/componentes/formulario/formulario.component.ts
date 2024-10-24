@@ -27,7 +27,7 @@ export class FormularioComponent {
 
   selecionarBanda(){
 
-    this.service.getLetraMusica().subscribe({
+    this.service.getLetraMusica(this.banda,this.musica).subscribe({
       next: res=>{ 
         this.mensagem.letra = res.lyrics;
         

@@ -8,11 +8,18 @@ import { Musica } from '../models/MusicaModel';
 })
 export class MusicaService {
 
-  private url = 'https://api.lyrics.ovh/v1/djavan/samurai';
+  private url = 'https://api.lyrics.ovh/v1/';
+
+  private requisicao?: string;
 
   constructor(private http : HttpClient) {}
 
-  getLetraMusica(): Observable<Musica> {
-    return this.http.get<Musica>(this.url);
+  getLetraMusica(banda: string, musica: string): Observable<Musica> {
+
+    this.requisicao = `${this.url}${banda}/${musica}`;
+
+    console.log(this.requisicao);
+
+    return this.http.get<Musica>(this.requisicao);
   }
 }
