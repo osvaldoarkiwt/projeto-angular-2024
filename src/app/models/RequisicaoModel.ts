@@ -1,4 +1,5 @@
 export  type Requisicao = {
     banda: string,
-    musica: string
+    musica: string,
+    letra: string
 }

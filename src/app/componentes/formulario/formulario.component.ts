@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Requisicao } from '../../models/RequisicaoModel';
+import { MusicaService } from '../../services/musica-service.service';
 
 @Component({
   selector: 'app-formulario',
@@ -14,14 +15,26 @@ export class FormularioComponent {
   banda: string = '';
   musica: string = '';
 
+  constructor(private service : MusicaService){}
+
   mensagem : Requisicao = {
     banda: '',
-    musica:''
+    musica:'',
+    letra:''
   };
 
   @Output() emissor = new EventEmitter<Requisicao>();
 
   selecionarBanda(){
+
+    this.service.getLetraMusica().subscribe({
+      next: res=>{ 
+        this.mensagem.letra = res.lyrics;
+        
+        console.log(res.lyrics);
+      } ,
+      error: err => console.log(err) 
+    });
 
     this.mensagem.banda = this.banda;
 
