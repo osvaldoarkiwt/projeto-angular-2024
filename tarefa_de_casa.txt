@@ -1,0 +1,6 @@
+-criar o service correios
+-criar o model EnderecoModel
+-implementar o método de getEndereco
+-criar uma página para o formulário e 
+o painel do endereço
+-implementar a busca do endereço a partir de um cep.
