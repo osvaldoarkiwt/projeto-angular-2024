@@ -7,10 +7,7 @@ import { AlunoPerfilComponent } from './pages/aluno-perfil/aluno-perfil/aluno-pe
 export const routes: Routes = [
     {path: 'inicio', component: InicioMainComponent},
     {path:'contato', component: ContatoMainComponent},
-    {path:'alunos', component: AlunosMainComponent,
-        children:[
-            {path:'perfil', component:AlunoPerfilComponent}
-        ]
-    },
+    {path:'alunos', component: AlunosMainComponent },
+    {path:'perfil', component: AlunoPerfilComponent},
     {path:'', redirectTo:'/inicio', pathMatch:'full'}
 ];

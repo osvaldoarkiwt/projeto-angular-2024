@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../../../services/api.service';
 
 @Component({
   selector: 'app-aluno-perfil',
@@ -9,4 +10,14 @@ import { Component } from '@angular/core';
 })
 export class AlunoPerfilComponent {
 
+  constructor(private service : ApiService){}
+
+  buscar(){
+    this.service.getAlunoPeloId().subscribe(
+      {
+        next: res => console.log(res),
+        error: err => console.log(err)
+      }
+    );
+  }
 }
