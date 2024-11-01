@@ -8,7 +8,7 @@ import { Aluno } from '../models/AlunoModel';
 })
 export class ApiService {
 
-  private url = 'http://localhost:8080/alunos/4';
+  private url = 'http://localhost:8080/alunos';
 
   private requisicao?: string;
 
@@ -16,6 +16,11 @@ export class ApiService {
 
   getAlunoPeloId(): Observable<Aluno> {
 
-    return this.http.get<Aluno>(this.url);
+    return this.http.get<Aluno>(this.url+'/4');
   }
+
+  postAluno(aluno: Aluno): Observable<Aluno>{
+    return this.http.post<Aluno>(this.url, aluno);
+  }
+
 }
